@@ -1,4 +1,6 @@
-export interface CreateTaskDto{
-    readonly user:string;
-    readonly task:string;
+export interface CreateTaskDto {
+
+    readonly user: string;
+    readonly task: string;
+
 }

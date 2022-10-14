@@ -14,7 +14,8 @@ require('dotenv').config()
     ConfigModule.forRoot({
       envFilePath: `.env`
   }),
-    MongooseModule.forRoot(config().database.host+":"+config().database.port+"/"+config().database.name),TaskModule
+
+    MongooseModule.forRoot(config().database.host+config().database.user+":"+config().database.pass+"@"+config().database.name+"?retryWrites=true&w=majority"),TaskModule
   ],
   controllers: [AppController],
   providers: [AppService],
